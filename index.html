@@ -38,9 +38,10 @@
     font-family: 'Noto Serif SC', 'Songti SC', serif;
     color: var(--ink);
     background: var(--cream);
-    line-height: 1.75;
+    line-height: 1.85;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    font-size: 17px;
   }
 
   /* ============ Layout ============ */
@@ -278,8 +279,8 @@
   }
 
   .intro-text {
-    font-size: 17px;
-    line-height: 2;
+    font-size: 19px;
+    line-height: 2.1;
     color: var(--ink-soft);
     text-align: justify;
     text-justify: inter-ideograph;
@@ -386,14 +387,14 @@
   .forum-meta {
     font-family: 'Instrument Serif', serif;
     font-style: italic;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--pale);
     letter-spacing: 0.05em;
   }
 
   .forum-text {
-    font-size: 16px;
-    line-height: 2;
+    font-size: 18px;
+    line-height: 2.1;
     color: var(--cream-dark);
   }
 
@@ -448,7 +449,7 @@
   .highlight-zh {
     font-family: 'Noto Serif SC', serif;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 30px;
     letter-spacing: 0.05em;
     margin-bottom: 8px;
     color: var(--ink);
@@ -457,14 +458,14 @@
   .highlight-en {
     font-family: 'Instrument Serif', serif;
     font-style: italic;
-    font-size: 16px;
+    font-size: 17px;
     color: var(--muted);
     margin-bottom: 20px;
   }
 
   .highlight-text {
-    font-size: 15px;
-    line-height: 1.9;
+    font-size: 17px;
+    line-height: 2;
     color: var(--ink-soft);
   }
 
@@ -529,7 +530,7 @@
   .schedule-content {
     font-family: 'Noto Serif SC', serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8;
     color: var(--ink);
   }
@@ -537,7 +538,7 @@
   .schedule-content .sub {
     display: block;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--muted);
     margin-top: 6px;
   }
@@ -557,10 +558,10 @@
   }
 
   .audience-list li {
-    padding: 18px 0 18px 32px;
+    padding: 22px 0 22px 32px;
     border-bottom: 1px solid var(--paper-line);
     font-family: 'Noto Serif SC', serif;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--ink-soft);
     position: relative;
   }
@@ -569,7 +570,7 @@
     content: '';
     position: absolute;
     left: 0;
-    top: 28px;
+    top: 32px;
     width: 8px;
     height: 8px;
     background: var(--terra);
@@ -603,13 +604,13 @@
   .cta-tagline {
     font-family: 'Instrument Serif', serif;
     font-style: italic;
-    font-size: 22px;
+    font-size: 24px;
     color: var(--pale);
     margin-bottom: 60px;
   }
 
   .cta-info {
-    max-width: 700px;
+    max-width: 740px;
     margin: 0 auto 60px;
     border-top: 1px solid rgba(236, 228, 213, 0.2);
     border-bottom: 1px solid rgba(236, 228, 213, 0.2);
@@ -621,7 +622,7 @@
     grid-template-columns: 180px 1fr;
     gap: 32px;
     text-align: left;
-    padding: 16px 0;
+    padding: 20px 0;
   }
 
   @media (max-width: 600px) {
@@ -633,27 +634,43 @@
 
   .cta-info-label {
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 0.25em;
     color: var(--terra);
   }
 
   .cta-info-value {
     font-family: 'Noto Serif SC', serif;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--cream);
     line-height: 1.8;
+  }
+
+  .cta-info-value .price-amount {
+    font-family: 'Italiana', serif;
+    font-size: 36px;
+    color: var(--cream);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .cta-info-value .price-detail {
+    display: block;
+    font-size: 15px;
+    color: var(--pale);
+    margin-top: 8px;
+    line-height: 1.7;
   }
 
   .cta-button {
     display: inline-block;
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.3em;
     color: var(--ink);
     background: var(--cream);
-    padding: 22px 56px;
+    padding: 24px 64px;
     text-decoration: none;
     transition: all 0.3s ease;
     border: 1px solid var(--cream);
@@ -1045,7 +1062,14 @@
     <div class="cta-info reveal">
       <div class="cta-info-row">
         <div class="cta-info-label">活 动 费</div>
-        <div class="cta-info-value">RM 1800 / 人<br><span style="font-size:14px;color:var(--pale);">含活动费用 · 不含机票酒店餐食</span></div>
+        <div class="cta-info-value">
+          <span class="price-amount">RM 1,800 / 人</span>
+          <span class="price-detail">
+            含活动费用 · 不含机票、酒店、餐食<br>
+            台北交通和住宿都非常方便，大家可以自行安排，<br>
+            或者跟随大队一起移动。
+          </span>
+        </div>
       </div>
       <div class="cta-info-row">
         <div class="cta-info-label">行 程</div>
@@ -1053,11 +1077,11 @@
       </div>
       <div class="cta-info-row">
         <div class="cta-info-label">报 名 截 止</div>
-        <div class="cta-info-value"> （额满即止）</div>
+        <div class="cta-info-value">__ 月 __ 日（额满即止）</div>
       </div>
       <div class="cta-info-row">
         <div class="cta-info-label">联 络 我 们</div>
-        <div class="cta-info-value">WhatsApp: +6016-676 0079<br>Email: sparkofwisdom824@gmail.com</div>
+        <div class="cta-info-value">WhatsApp: +60 __-____ ____<br>Email: ____@____</div>
       </div>
     </div>
 
@@ -1069,8 +1093,8 @@
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="container">
-    <div class="footer-brand">半亩天光 <span style="color:var(--terra);"></span> </div>
-    <div class="footer-meta">2026 · TAIWAN READING JOURNEY · 主 办</div>
+    <div class="footer-brand">半亩天光 <span style="color:var(--terra);">×</span> 君宝</div>
+    <div class="footer-meta">2026 · TAIWAN READING JOURNEY · 联 合 主 办</div>
   </div>
 </footer>
 

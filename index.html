@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>六日台北 · 一场关于阅读的远行 | 2026 年 12 月</title>
+<meta name="description" content="2026 年 12 月 11–16 日，与新马华文教育同行飞往台北，参与国际阅读论坛——今年主题：AI 与精准教学。半亩天光 × 君宝 联合主办。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Italiana&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #ECE4D5;
+    --cream-dark: #DFD4BD;
+    --paper-line: #D2C6B2;
+    --ink: #26211C;
+    --ink-soft: #3A332B;
+    --terra: #B35835;
+    --terra-deep: #8E3F22;
+    --muted: #8A7C69;
+    --pale: #AF9F87;
+    --highlight: #F4D773;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Noto Serif SC', 'Songti SC', serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.75;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============ Layout ============ */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .container-narrow {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ============ Typography ============ */
+  .latin-italic {
+    font-family: 'Instrument Serif', 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .latin-display {
+    font-family: 'Italiana', 'Cormorant Garamond', serif;
+    font-weight: 400;
+  }
+
+  .latin-sans {
+    font-family: 'Noto Sans SC', sans-serif;
+    letter-spacing: 0.1em;
+  }
+
+  .eyebrow {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    color: var(--terra);
+    text-transform: none;
+  }
+
+  .eyebrow-zh {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    color: var(--muted);
+  }
+
+  /* ============ Top Nav ============ */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 18px 32px;
+    background: rgba(236, 228, 213, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+
+  .nav.scrolled {
+    border-bottom-color: var(--paper-line);
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-brand {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-brand .dot {
+    color: var(--terra);
+    margin: 0 6px;
+  }
+
+  .nav-cta {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 8px 18px;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    transition: all 0.25s ease;
+  }
+  .nav-cta:hover {
+    background: var(--ink);
+    color: var(--cream);
+  }
+
+  /* ============ Hero ============ */
+  .hero {
+    min-height: 100vh;
+    padding: 120px 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+  }
+
+  .hero-eyebrow-line {
+    margin-bottom: 12px;
+  }
+
+  .hero-year {
+    font-family: 'Instrument Serif', serif;
+    font-size: 14px;
+    letter-spacing: 0.4em;
+    color: var(--muted);
+    margin-bottom: 60px;
+  }
+
+  .hero-dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: var(--terra);
+    border-radius: 50%;
+    margin: 0 auto 40px;
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: clamp(80px, 14vw, 200px);
+    letter-spacing: 0.08em;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 32px;
+  }
+
+  .hero-subtitle {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: clamp(20px, 3vw, 36px);
+    letter-spacing: 0.2em;
+    color: var(--ink);
+    margin-bottom: 60px;
+  }
+
+  /* Mountain SVG container */
+  .hero-landscape {
+    width: min(560px, 80%);
+    margin: 0 auto 40px;
+  }
+
+  .hero-landscape svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hero-place {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--terra);
+    margin-bottom: 8px;
+  }
+
+  .hero-dots {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 60px;
+  }
+  .hero-dots span {
+    width: 3px;
+    height: 3px;
+    background: var(--muted);
+    border-radius: 50%;
+  }
+
+  .hero-date {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(48px, 7vw, 88px);
+    color: var(--ink);
+    margin-bottom: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-date .dash {
+    color: var(--terra);
+    margin: 0 16px;
+  }
+
+  .hero-meta {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.4em;
+    color: var(--ink);
+  }
+
+  /* ============ Section Base ============ */
+  section {
+    padding: 100px 0;
+    position: relative;
+  }
+
+  .section-eyebrow {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 44px);
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  /* ============ Intro Section ============ */
+  .intro {
+    background: var(--cream);
+  }
+
+  .intro-text {
+    font-size: 17px;
+    line-height: 2;
+    color: var(--ink-soft);
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+
+  .intro-text p {
+    margin-bottom: 1.5em;
+  }
+
+  .intro-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: clamp(20px, 2.5vw, 28px);
+    line-height: 1.8;
+    color: var(--ink);
+    text-align: center;
+    margin: 60px auto;
+    max-width: 600px;
+    position: relative;
+    padding: 30px 0;
+  }
+  .pull-quote::before,
+  .pull-quote::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: var(--terra);
+  }
+  .pull-quote::before { top: 0; }
+  .pull-quote::after { bottom: 0; }
+
+  /* ============ Forum Hero (AI主题) ============ */
+  .forum-hero {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .forum-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--terra) 20%, var(--terra) 80%, transparent);
+  }
+
+  .forum-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .forum-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .forum-label {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: var(--terra);
+    margin-bottom: 20px;
+  }
+
+  .forum-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: clamp(36px, 5vw, 56px);
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    color: var(--cream);
+    margin-bottom: 32px;
+  }
+
+  .forum-theme {
+    display: inline-block;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.15em;
+    color: var(--ink);
+    background: var(--highlight);
+    padding: 10px 24px;
+    margin-bottom: 32px;
+  }
+
+  .forum-meta {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--pale);
+    letter-spacing: 0.05em;
+  }
+
+  .forum-text {
+    font-size: 16px;
+    line-height: 2;
+    color: var(--cream-dark);
+  }
+
+  .forum-text p {
+    margin-bottom: 1em;
+  }
+
+  /* ============ Highlights Grid ============ */
+  .highlights {
+    background: var(--cream);
+    padding: 120px 0;
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 60px;
+  }
+
+  @media (max-width: 768px) {
+    .highlights-grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+
+  .highlight-card {
+    border-top: 1px solid var(--paper-line);
+    padding-top: 28px;
+    position: relative;
+  }
+
+  .highlight-num {
+    font-family: 'Italiana', serif;
+    font-size: 56px;
+    color: var(--terra);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .highlight-day {
+    display: inline-block;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--terra);
+    border: 1px solid var(--terra);
+    padding: 4px 12px;
+    margin-bottom: 18px;
+  }
+
+  .highlight-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .highlight-en {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  .highlight-text {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+  }
+
+  /* ============ Schedule ============ */
+  .schedule {
+    background: var(--cream-dark);
+    padding: 120px 0;
+  }
+
+  .schedule-table {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .schedule-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 40px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--paper-line);
+    align-items: start;
+  }
+
+  .schedule-row:last-child {
+    border-bottom: none;
+  }
+
+  .schedule-row.featured {
+    background: rgba(179, 88, 53, 0.05);
+    margin: 0 -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (max-width: 600px) {
+    .schedule-row {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+    .schedule-row.featured {
+      margin: 0 -16px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  .schedule-date {
+    font-family: 'Italiana', serif;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .schedule-day {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    margin-top: 6px;
+  }
+
+  .schedule-content {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--ink);
+  }
+
+  .schedule-content .sub {
+    display: block;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  /* ============ Audience ============ */
+  .audience {
+    padding: 120px 0;
+    background: var(--cream);
+    text-align: center;
+  }
+
+  .audience-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .audience-list li {
+    padding: 18px 0 18px 32px;
+    border-bottom: 1px solid var(--paper-line);
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    color: var(--ink-soft);
+    position: relative;
+  }
+
+  .audience-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 28px;
+    width: 8px;
+    height: 8px;
+    background: var(--terra);
+    transform: rotate(45deg);
+  }
+
+  /* ============ CTA / Registration ============ */
+  .cta {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 140px 0;
+    text-align: center;
+    position: relative;
+  }
+
+  .cta-eyebrow {
+    color: var(--terra);
+    margin-bottom: 24px;
+  }
+
+  .cta-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: clamp(32px, 5vw, 56px);
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    color: var(--cream);
+  }
+
+  .cta-tagline {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--pale);
+    margin-bottom: 60px;
+  }
+
+  .cta-info {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    border-top: 1px solid rgba(236, 228, 213, 0.2);
+    border-bottom: 1px solid rgba(236, 228, 213, 0.2);
+    padding: 40px 0;
+  }
+
+  .cta-info-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 32px;
+    text-align: left;
+    padding: 16px 0;
+  }
+
+  @media (max-width: 600px) {
+    .cta-info-row {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+  }
+
+  .cta-info-label {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    color: var(--terra);
+  }
+
+  .cta-info-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    color: var(--cream);
+    line-height: 1.8;
+  }
+
+  .cta-button {
+    display: inline-block;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: var(--ink);
+    background: var(--cream);
+    padding: 22px 56px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid var(--cream);
+  }
+
+  .cta-button:hover {
+    background: var(--terra);
+    border-color: var(--terra);
+    color: var(--cream);
+  }
+
+  .cta-secondary {
+    display: block;
+    margin-top: 32px;
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  /* ============ Footer ============ */
+  footer {
+    background: var(--cream);
+    padding: 60px 0 40px;
+    text-align: center;
+    border-top: 1px solid var(--paper-line);
+  }
+
+  .footer-brand {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .footer-meta {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+  }
+
+  /* Stamp */
+  .stamp {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--terra);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream);
+    z-index: 90;
+    opacity: 0;
+    transform: translateY(20px) rotate(-12deg);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    pointer-events: none;
+  }
+
+  .stamp.visible {
+    opacity: 1;
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  .stamp-inner {
+    width: 64px;
+    height: 64px;
+    border: 1px solid var(--terra);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .stamp-inner .top {
+    font-family: 'Instrument Serif', serif;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--terra);
+  }
+
+  .stamp-inner .dots {
+    color: var(--terra);
+    font-size: 8px;
+    margin: 2px 0;
+    letter-spacing: 2px;
+  }
+
+  .stamp-inner .bot {
+    font-family: 'Instrument Serif', serif;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--terra);
+  }
+
+  /* ============ Reveal animation ============ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ============ Mobile fixes ============ */
+  @media (max-width: 600px) {
+    .nav {
+      padding: 14px 20px;
+    }
+    .container, .container-narrow {
+      padding: 0 20px;
+    }
+    section {
+      padding: 70px 0;
+    }
+    .stamp {
+      width: 60px;
+      height: 60px;
+      bottom: 16px;
+      right: 16px;
+    }
+    .stamp-inner {
+      width: 48px;
+      height: 48px;
+    }
+    .stamp-inner .top { font-size: 9px; }
+    .stamp-inner .bot { font-size: 7px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">
+      Taiwan Reading <span class="dot">·</span> Journey
+    </a>
+    <a href="#cta" class="nav-cta">立 即 报 名</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="container">
+    <div class="hero-eyebrow-line">
+      <span class="eyebrow">Taiwan Reading Journey</span>
+    </div>
+    <div class="hero-year">December 2026</div>
+    <div class="hero-dot"></div>
+
+    <h1 class="hero-title reveal">六日台北</h1>
+    <p class="hero-subtitle reveal">一 场 关 于 阅 读 的 远 行</p>
+
+    <!-- Mountain landscape SVG -->
+    <div class="hero-landscape reveal">
+      <svg viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sun -->
+        <circle cx="380" cy="105" r="20" fill="#B35835"/>
+        <!-- Birds -->
+        <path d="M 320 70 q 6 -4 12 0" stroke="#5F554B" stroke-width="1.5" fill="none"/>
+        <path d="M 350 60 q 5 -3 10 0" stroke="#5F554B" stroke-width="1.2" fill="none"/>
+        <path d="M 450 75 q 6 -4 12 0" stroke="#5F554B" stroke-width="1.5" fill="none"/>
+        <!-- Far mountains (palest) -->
+        <polygon points="0,180 70,125 150,145 240,110 320,135 410,100 490,130 560,115 560,180"
+                 fill="#AF9F87"/>
+        <!-- Middle mountains -->
+        <polygon points="30,180 110,110 190,140 280,90 370,125 450,105 520,130 560,180"
+                 fill="#5F554B"/>
+        <!-- Near mountains (darkest) -->
+        <polygon points="60,180 130,135 220,150 320,120 400,145 480,130 560,155 560,180"
+                 fill="#26211C"/>
+        <!-- Ground line -->
+        <line x1="0" y1="180" x2="560" y2="180" stroke="#26211C" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <p class="hero-place latin-italic">Taipei</p>
+    <div class="hero-dots"><span></span><span></span><span></span><span></span></div>
+
+    <p class="hero-date latin-display">12.11<span class="dash">—</span>12.16</p>
+    <p class="hero-meta">6 天 5 晚</p>
+  </div>
+</header>
+
+<!-- ============ INTRO ============ -->
+<section class="intro">
+  <div class="container-narrow">
+    <div class="section-eyebrow reveal">
+      <span class="eyebrow-zh">为 什 么 这 一 趟</span>
+    </div>
+    <h2 class="section-title reveal">为什么我们这次<br>要去台北</h2>
+
+    <div class="intro-text reveal">
+      <p>每年到了 12 月，台湾会办一场华文教育界的大事——<strong>国际阅读论坛</strong>，由品学堂的黄国珍老师主办。这场论坛，亚洲各地的华文教育人都会去。</p>
+
+      <p>2026 年的主题，是一个我们这一代华文老师每天都在面对、却没几个人真正想清楚的问题：</p>
+    </div>
+
+    <div class="pull-quote reveal">
+      AI 已经走进我们的课室了。<br>
+      我们要怎么用？怎么用得对？<br>
+      怎么用了之后，能真的帮到不同程度的孩子？
+    </div>
+
+    <div class="intro-text reveal">
+      <p>这不是台湾的问题，这是我们马来西亚华文老师每天都在面对的问题。</p>
+
+      <p>所以这次，<strong>半亩天光</strong>和<strong>君宝</strong>一起办这趟<strong>「六日台北 · 阅读远行」</strong>，带新马的老师一起飞一趟。我们不只是去听论坛，我们是去看、去问、去把答案带回来。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORUM HERO (AI主题强调) ============ -->
+<section class="forum-hero">
+  <div class="container">
+    <div class="forum-hero-grid">
+      <div class="reveal">
+        <p class="forum-label">— Featured Forum 2026 —</p>
+        <h2 class="forum-title">国际阅读论坛<br>第 一 主 轴</h2>
+        <span class="forum-theme">AI 与精准教学</span>
+        <p class="forum-meta">12 月 12 日 — 13 日｜两整天｜由 黄国珍 老师主持</p>
+      </div>
+      <div class="forum-text reveal">
+        <p>这是一场华文教育界少数能让你真正"靠近现场"的对话。</p>
+        <p>不是看别人事后整理的笔记，不是听二手转述。是你坐在那里，听黄国珍老师怎么讲，听台湾老师怎么发问，听亚洲其他地方的老师怎么回应。</p>
+        <p>回来你就有自己的判断，不用靠别人。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HIGHLIGHTS ============ -->
+<section class="highlights">
+  <div class="container">
+    <div class="section-eyebrow reveal">
+      <span class="eyebrow-zh">这 一 趟 你 会 得 到 什 么</span>
+    </div>
+    <h2 class="section-title reveal">四 个 主 轴<br>构 成 一 趟 远 行</h2>
+
+    <div class="highlights-grid">
+      <div class="highlight-card reveal">
+        <div class="highlight-num">01</div>
+        <span class="highlight-day">12 / 12 — 13</span>
+        <h3 class="highlight-zh">国际阅读论坛</h3>
+        <p class="highlight-en">International Reading Forum · Theme: AI &amp; Precision Teaching</p>
+        <p class="highlight-text">由黄国珍老师主持，2026 年主题「AI 与精准教学」。两整天，与亚洲华文教育同行一同探问 AI 时代下的教学未来。</p>
+      </div>
+
+      <div class="highlight-card reveal">
+        <div class="highlight-num">02</div>
+        <span class="highlight-day">12 / 14 — 15</span>
+        <h3 class="highlight-zh">品学堂深度参访</h3>
+        <p class="highlight-en">Visit to PaperSchool · Reading Literacy Lab</p>
+        <p class="highlight-text">品学堂是台湾"读写素养"教学方法的研发地。我们走进他们办公室，看他们怎么把阅读理解从"读得懂"教到"用得上"。这一站，自己跑团是进不去的。</p>
+      </div>
+
+      <div class="highlight-card reveal">
+        <div class="highlight-num">03</div>
+        <span class="highlight-day">12 / 14 — 15</span>
+        <h3 class="highlight-zh">两所学校 · 课堂现场</h3>
+        <p class="highlight-en">Inside Taiwan Classrooms</p>
+        <p class="highlight-text">不是走马观花拍照打卡。是真的进课室，看老师怎么备课、怎么发问、怎么跟孩子互动。一天看两所学校，每一所风格都不一样。</p>
+      </div>
+
+      <div class="highlight-card reveal">
+        <div class="highlight-num">04</div>
+        <span class="highlight-day">12 / 14 — 15</span>
+        <h3 class="highlight-zh">绘本深度阅读专题</h3>
+        <p class="highlight-en">Picture Book Reading Masterclass</p>
+        <p class="highlight-text">绘本不只是给小孩看图的，是教他们认识世界的第一本课本。这堂专题讲座会让你重新看绘本——以后自己上课、自己选绘本，眼光会不一样。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCHEDULE ============ -->
+<section class="schedule">
+  <div class="container">
+    <div class="section-eyebrow reveal">
+      <span class="eyebrow-zh">行 程 一 览</span>
+    </div>
+    <h2 class="section-title reveal">六 日 行 程</h2>
+
+    <div class="schedule-table">
+      <div class="schedule-row reveal">
+        <div>
+          <div class="schedule-date latin-display">12.11</div>
+          <div class="schedule-day">FRI · 周五</div>
+        </div>
+        <div class="schedule-content">
+          抵达台北
+          <span class="sub">入住饭店 · 晚上行前说明会</span>
+        </div>
+      </div>
+
+      <div class="schedule-row featured reveal">
+        <div>
+          <div class="schedule-date latin-display">12.12</div>
+          <div class="schedule-day">SAT · 周六</div>
+        </div>
+        <div class="schedule-content">
+          国际阅读论坛 · 第一天
+          <span class="sub">主题：AI 与精准教学 · 晚上欢迎晚宴</span>
+        </div>
+      </div>
+
+      <div class="schedule-row featured reveal">
+        <div>
+          <div class="schedule-date latin-display">12.13</div>
+          <div class="schedule-day">SUN · 周日</div>
+        </div>
+        <div class="schedule-content">
+          国际阅读论坛 · 第二天
+          <span class="sub">论坛延续 · 晚上自由活动</span>
+        </div>
+      </div>
+
+      <div class="schedule-row reveal">
+        <div>
+          <div class="schedule-date latin-display">12.14</div>
+          <div class="schedule-day">MON · 周一</div>
+        </div>
+        <div class="schedule-content">
+          学校参访日
+          <span class="sub">上午一所、下午一所 · 晚间团内反思</span>
+        </div>
+      </div>
+
+      <div class="schedule-row reveal">
+        <div>
+          <div class="schedule-date latin-display">12.15</div>
+          <div class="schedule-day">TUE · 周二</div>
+        </div>
+        <div class="schedule-content">
+          品学堂深度日 + 绘本专题
+          <span class="sub">上午品学堂参访 · 下午绘本讲座 · 晚间北投温泉</span>
+        </div>
+      </div>
+
+      <div class="schedule-row reveal">
+        <div>
+          <div class="schedule-date latin-display">12.16</div>
+          <div class="schedule-day">WED · 周三</div>
+        </div>
+        <div class="schedule-content">
+          文化走读 · 送机
+          <span class="sub">上午书店/出版社走读 · 下午自由 · 傍晚启程返马</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUDIENCE ============ -->
+<section class="audience">
+  <div class="container-narrow">
+    <div class="section-eyebrow reveal">
+      <span class="eyebrow-zh">这 一 趟 适 合 谁</span>
+    </div>
+    <h2 class="section-title reveal">如 果 你 是 这 样 的 人<br>那 就 一 起 来 吧</h2>
+
+    <ul class="audience-list reveal">
+      <li>华小、独中、私立学校的华文老师</li>
+      <li>关心阅读教学和写作教学的老师</li>
+      <li>学校的科主任、课程负责人</li>
+      <li>想知道 AI 怎么用在华文课的老师</li>
+      <li>想给自己的教学加一点新东西的所有教育人</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CTA / Registration ============ -->
+<section class="cta" id="cta">
+  <div class="container-narrow">
+    <p class="eyebrow cta-eyebrow reveal">— Now Open for Registration —</p>
+    <h2 class="cta-title reveal">名 额 有 限<br>欢 迎 加 入 我 们</h2>
+    <p class="cta-tagline reveal">A six-day journey through reading, with you.</p>
+
+    <div class="cta-info reveal">
+      <div class="cta-info-row">
+        <div class="cta-info-label">活 动 费</div>
+        <div class="cta-info-value">RM ____ / 人<br><span style="font-size:14px;color:var(--pale);">含活动费用 · 不含机票酒店餐食</span></div>
+      </div>
+      <div class="cta-info-row">
+        <div class="cta-info-label">行 程</div>
+        <div class="cta-info-value">2026 年 12 月 11 日 — 16 日</div>
+      </div>
+      <div class="cta-info-row">
+        <div class="cta-info-label">报 名 截 止</div>
+        <div class="cta-info-value">__ 月 __ 日（额满即止）</div>
+      </div>
+      <div class="cta-info-row">
+        <div class="cta-info-label">联 络 我 们</div>
+        <div class="cta-info-value">WhatsApp: +60 __-____ ____<br>Email: ____@____</div>
+      </div>
+    </div>
+
+    <a href="#" class="cta-button">联 络 报 名</a>
+    <span class="cta-secondary">愿我们带回来的，不止是笔记。</span>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-brand">半亩天光 <span style="color:var(--terra);">×</span> 君宝</div>
+    <div class="footer-meta">2026 · TAIWAN READING JOURNEY · 联 合 主 办</div>
+  </div>
+</footer>
+
+<!-- Floating stamp -->
+<div class="stamp" id="stamp">
+  <div class="stamp-inner">
+    <div class="top">TAIPEI</div>
+    <div class="dots">···</div>
+    <div class="bot">MMXXVI</div>
+  </div>
+</div>
+
+<script>
+  // Nav scrolled state
+  const nav = document.getElementById('nav');
+  const stamp = document.getElementById('stamp');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+    if (window.scrollY > 300) {
+      stamp.classList.add('visible');
+    } else {
+      stamp.classList.remove('visible');
+    }
+  });
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  reveals.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

@@ -889,6 +889,188 @@
     transform: translateY(-4px);
     box-shadow: 0 12px 32px rgba(38, 33, 28, 0.12);
   }
+
+  /* ============ Live Recap (real photos from 2025 trip) ============ */
+  .live-recap {
+    background: var(--cream);
+    padding: 100px 0 80px;
+  }
+
+  .live-recap-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .live-recap-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: clamp(26px, 3.6vw, 38px);
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+
+  .live-recap-sub {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--muted);
+  }
+
+  .recap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .recap-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 520px;
+    }
+  }
+
+  .recap-photo {
+    position: relative;
+    overflow: hidden;
+    background: var(--cream-dark);
+  }
+
+  .recap-photo img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  @media (max-width: 768px) {
+    .recap-photo img {
+      height: 320px;
+    }
+  }
+
+  .recap-photo:hover img {
+    transform: scale(1.04);
+  }
+
+  .recap-caption {
+    padding: 18px 4px 0;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .recap-caption .place {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--terra);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ============ Companions Section (before CTA) ============ */
+  .companions {
+    background: var(--cream-dark);
+    padding: 110px 0;
+    text-align: center;
+  }
+
+  .companions-eyebrow {
+    margin-bottom: 24px;
+  }
+
+  .companions-eyebrow .text {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    color: var(--terra);
+  }
+
+  .companions-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: clamp(26px, 3.6vw, 40px);
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+
+  .companions-stat {
+    display: inline-block;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 60px;
+    max-width: 580px;
+  }
+
+  .companions-stat strong {
+    color: var(--terra);
+    font-family: 'Italiana', serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 6px;
+    vertical-align: -4px;
+  }
+
+  .companions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .companions-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      max-width: 600px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .companions-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  .companions-photo {
+    overflow: hidden;
+    background: var(--cream);
+  }
+
+  .companions-photo img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .companions-photo:hover img {
+    transform: scale(1.05);
+  }
+
+  /* On mobile, make the company photos slightly taller */
+  @media (max-width: 768px) {
+    .companions-photo img {
+      height: 280px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -1010,6 +1192,42 @@
       <img src="recap-cover.jpeg" alt="2025 阅读未来国际教育论坛 主题封面" loading="lazy">
       <img src="recap-day1.png" alt="2025 论坛 12/13 议程" loading="lazy">
       <img src="recap-day2.png" alt="2025 论坛 12/14 议程" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVE RECAP — real photos from 2025 trip ============ -->
+<section class="live-recap">
+  <div class="container">
+    <div class="live-recap-header reveal">
+      <h2 class="live-recap-title">2025 · 现场实录</h2>
+      <p class="live-recap-sub">— a glimpse of what we did last year —</p>
+    </div>
+
+    <div class="recap-grid">
+      <div class="recap-photo reveal">
+        <img src="images/recap-1-welcome.jpg" alt="2025 半亩天光教育研学团 旱稻田艺术幼儿园" loading="lazy">
+        <div class="recap-caption">
+          走进台湾的幼儿园
+          <span class="place">旱稻田艺术幼儿园</span>
+        </div>
+      </div>
+
+      <div class="recap-photo reveal">
+        <img src="images/recap-3-pinxuetang.jpg" alt="2025 走进品学堂办公室" loading="lazy">
+        <div class="recap-caption">
+          走进品学堂办公室
+          <span class="place">Wisdom Hall · 品学堂</span>
+        </div>
+      </div>
+
+      <div class="recap-photo reveal">
+        <img src="images/recap-4-parenting.jpg" alt="2025 拜访亲子天下编辑部" loading="lazy">
+        <div class="recap-caption">
+          拜访亲子天下编辑部
+          <span class="place">CommonWealth · 亲子天下</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1151,6 +1369,34 @@
       <li>想知道 AI 怎么用在华文课的老师</li>
       <li>想给自己的教学加一点新东西的所有教育人</li>
     </ul>
+  </div>
+</section>
+
+<!-- ============ COMPANIONS — social proof ============ -->
+<section class="companions">
+  <div class="container">
+    <div class="companions-eyebrow reveal">
+      <span class="text">— A Journey, Together —</span>
+    </div>
+    <h2 class="companions-title reveal">与你同行的，<br>是这些教育人</h2>
+
+    <p class="companions-stat reveal">
+      2025 年，<strong>22</strong> 位新马教育同行<br>
+      跟着我们一起走过这一条路。<br>
+      2026 年，名额限 30 位。
+    </p>
+
+    <div class="companions-grid">
+      <div class="companions-photo reveal">
+        <img src="images/recap-2-classroom.jpg" alt="2025 走进台湾课堂参访" loading="lazy">
+      </div>
+      <div class="companions-photo reveal">
+        <img src="images/recap-5-picturebooks.jpg" alt="2025 绘本工作坊" loading="lazy">
+      </div>
+      <div class="companions-photo reveal">
+        <img src="images/recap-6-coffeechat.jpg" alt="2025 团内交流讨论" loading="lazy">
+      </div>
+    </div>
   </div>
 </section>
 

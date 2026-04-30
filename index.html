@@ -251,6 +251,35 @@
     color: var(--ink);
   }
 
+  .hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 40px;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: var(--terra);
+    background: rgba(179, 88, 53, 0.08);
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 1px solid rgba(179, 88, 53, 0.25);
+  }
+
+  .hero-status-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--terra);
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.3); }
+  }
+
   /* ============ Section Base ============ */
   section {
     padding: 100px 0;
@@ -292,6 +321,24 @@
 
   .intro-text p:last-child {
     margin-bottom: 0;
+  }
+
+  .intro-trust-line {
+    text-align: center;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 2;
+    color: var(--muted);
+    margin: -30px auto 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--paper-line);
+    max-width: 480px;
+  }
+
+  .intro-trust-line strong {
+    color: var(--terra);
+    font-weight: 500;
   }
 
   /* Pull quote */
@@ -691,6 +738,27 @@
     color: var(--muted);
   }
 
+  .cta-alt-contact {
+    margin-top: 28px;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 14px;
+    color: var(--pale);
+    letter-spacing: 0.05em;
+  }
+
+  .cta-email-link {
+    color: var(--terra);
+    text-decoration: none;
+    border-bottom: 1px solid var(--terra);
+    padding-bottom: 1px;
+    margin-left: 4px;
+    transition: opacity 0.25s ease;
+  }
+
+  .cta-email-link:hover {
+    opacity: 0.7;
+  }
+
   /* ============ Footer ============ */
   footer {
     background: var(--cream);
@@ -1072,58 +1140,72 @@
     }
   }
 
-  /* ============ Status Notice Section ============ */
-  .status-notice {
+  /* ============ About This Journey (merged section) ============ */
+  .about-journey {
     background: var(--cream);
     padding: 100px 0;
   }
 
-  .status-card {
-    max-width: 760px;
-    margin: 0 auto;
-    background: var(--cream-dark);
-    border-left: 3px solid var(--terra);
-    padding: 50px 50px 50px 56px;
-    position: relative;
+  .about-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  @media (max-width: 600px) {
-    .status-card {
-      padding: 40px 28px 40px 32px;
-    }
-  }
-
-  .status-eyebrow {
+  .about-eyebrow {
     font-family: 'Instrument Serif', serif;
     font-style: italic;
     font-size: 14px;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.3em;
     color: var(--terra);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
-  .status-title {
+  .about-title {
     font-family: 'Noto Serif SC', serif;
-    font-weight: 600;
-    font-size: clamp(22px, 3vw, 28px);
-    letter-spacing: 0.08em;
-    line-height: 1.6;
+    font-weight: 500;
+    font-size: clamp(26px, 3.6vw, 38px);
+    letter-spacing: 0.1em;
+    line-height: 1.5;
     color: var(--ink);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
-  .status-intro {
-    font-size: 17px;
-    line-height: 2;
+  .about-intro {
+    font-size: 16px;
+    line-height: 1.95;
     color: var(--ink-soft);
-    margin-bottom: 32px;
   }
 
-  .status-list-block {
-    margin-bottom: 28px;
+  .about-intro strong {
+    color: var(--terra);
+    font-weight: 500;
   }
 
-  .status-list-label {
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 920px;
+    margin: 0 auto 24px;
+  }
+
+  @media (max-width: 700px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+  }
+
+  .about-block {
+    background: var(--cream-dark);
+    border-top: 3px solid var(--terra);
+    padding: 32px 28px;
+  }
+
+  .about-block-label {
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 13px;
     letter-spacing: 0.2em;
@@ -1132,66 +1214,113 @@
     font-weight: 500;
   }
 
-  .status-list {
+  .about-list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  .status-list li {
-    padding: 8px 0 8px 28px;
-    font-size: 16px;
-    line-height: 1.85;
+  .about-list li {
+    padding: 7px 0 7px 22px;
+    font-size: 15px;
+    line-height: 1.75;
     color: var(--ink-soft);
     position: relative;
   }
 
-  .status-list.confirmed li::before {
+  .about-list li .muted-hint {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .about-list.confirmed li::before {
     content: '✓';
     position: absolute;
     left: 0;
-    top: 8px;
+    top: 7px;
     color: var(--terra);
     font-weight: 600;
-    font-size: 18px;
   }
 
-  .status-list.pending li::before {
+  .about-list.pending li::before {
     content: '·';
     position: absolute;
-    left: 8px;
-    top: 0;
+    left: 6px;
+    top: -2px;
     color: var(--muted);
-    font-size: 28px;
-    line-height: 1.3;
+    font-size: 24px;
   }
 
-  .status-footer {
-    border-top: 1px solid var(--paper-line);
-    padding-top: 24px;
-    margin-top: 8px;
+  .about-list.excluded li::before {
+    content: '×';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .about-help {
+    max-width: 920px;
+    margin: 0 auto;
+    background: var(--cream-dark);
+    border-left: 3px solid var(--terra);
+    padding: 28px 32px;
+  }
+
+  @media (max-width: 600px) {
+    .about-help {
+      padding: 22px 24px;
+    }
+  }
+
+  .about-help-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
     font-size: 16px;
-    line-height: 1.85;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .about-help-row {
+    padding: 8px 0;
+    font-size: 15px;
+    line-height: 1.8;
     color: var(--ink-soft);
   }
 
-  .status-footer strong {
+  .about-help-row strong {
     color: var(--terra);
     font-weight: 500;
   }
 
-  /* ============ Inclusion Section ============ */
-  .inclusion {
-    background: var(--cream-dark);
+  .about-help-footer {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--paper-line);
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .about-help-footer strong {
+    color: var(--terra);
+    font-weight: 500;
+  }
+
+  /* ============ FAQ Section ============ */
+  .faq {
+    background: var(--cream);
     padding: 100px 0;
   }
 
-  .inclusion-header {
+  .faq-header {
     text-align: center;
     margin-bottom: 50px;
   }
 
-  .inclusion-title {
+  .faq-title {
     font-family: 'Noto Serif SC', serif;
     font-weight: 500;
     font-size: clamp(26px, 3.6vw, 38px);
@@ -1201,109 +1330,75 @@
     margin-bottom: 14px;
   }
 
-  .inclusion-sub {
+  .faq-sub {
     font-family: 'Instrument Serif', serif;
     font-style: italic;
     font-size: 17px;
     color: var(--muted);
   }
 
-  .inclusion-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    max-width: 920px;
-    margin: 0 auto 40px;
-  }
-
-  @media (max-width: 700px) {
-    .inclusion-grid {
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-  }
-
-  .inclusion-box {
-    background: var(--cream);
-    padding: 36px 32px;
-    border-top: 3px solid var(--terra);
-  }
-
-  .inclusion-box.excluded {
-    border-top-color: var(--muted);
-  }
-
-  .inclusion-box-label {
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 13px;
-    letter-spacing: 0.25em;
-    color: var(--terra);
-    margin-bottom: 18px;
-    font-weight: 500;
-  }
-
-  .inclusion-box.excluded .inclusion-box-label {
-    color: var(--muted);
-  }
-
-  .inclusion-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .inclusion-box ul li {
-    padding: 8px 0;
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--ink-soft);
-    border-bottom: 1px dashed var(--paper-line);
-  }
-
-  .inclusion-box ul li:last-child {
-    border-bottom: none;
-  }
-
-  .inclusion-help {
-    max-width: 760px;
+  .faq-list {
+    max-width: 780px;
     margin: 0 auto;
-    background: var(--cream);
-    padding: 36px 40px;
-    border-left: 3px solid var(--terra);
   }
 
-  @media (max-width: 600px) {
-    .inclusion-help {
-      padding: 28px 24px;
-    }
-  }
-
-  .inclusion-help-title {
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    color: var(--ink);
-    margin-bottom: 16px;
-  }
-
-  .inclusion-help-row {
-    padding: 12px 0;
+  .faq-item {
     border-bottom: 1px solid var(--paper-line);
-    font-size: 15px;
-    line-height: 1.8;
+    padding: 4px 0;
+  }
+
+  .faq-item:first-child {
+    border-top: 1px solid var(--paper-line);
+  }
+
+  .faq-question {
+    cursor: pointer;
+    padding: 24px 40px 24px 4px;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink);
+    list-style: none;
+    position: relative;
+    transition: color 0.25s ease;
+  }
+
+  .faq-question:hover {
+    color: var(--terra);
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--terra);
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item[open] .faq-question::after {
+    content: '−';
+  }
+
+  .faq-answer {
+    padding: 0 40px 28px 4px;
+    font-size: 16px;
+    line-height: 1.95;
     color: var(--ink-soft);
   }
 
-  .inclusion-help-row:last-child {
-    border-bottom: none;
-  }
-
-  .inclusion-help-row strong {
+  .faq-answer strong {
     color: var(--terra);
     font-weight: 500;
-    display: inline-block;
-    margin-right: 6px;
   }
 </style>
 </head>
@@ -1359,6 +1454,11 @@
 
     <p class="hero-date latin-display">12.11<span class="dash">—</span>12.16</p>
     <p class="hero-meta">6 天 5 晚</p>
+
+    <div class="hero-status reveal">
+      <span class="hero-status-dot"></span>
+      正 在 招 募 · 限 30 位 · 额 满 即 止
+    </div>
   </div>
 </header>
 
@@ -1369,6 +1469,11 @@
       <span class="eyebrow-zh">为 什 么 这 一 趟</span>
     </div>
     <h2 class="section-title reveal">为什么我们这次<br>要去台北</h2>
+
+    <p class="intro-trust-line reveal">
+      这是我们第二年办了。<br>
+      <strong>2025 年，22 位新马教育同行已经走过这一条路。</strong>
+    </p>
 
     <div class="intro-text reveal">
       <p>每年到了 12 月，台湾会办一场华文教育界的大事——<strong>国际阅读论坛</strong>，由品学堂的黄国珍老师主办。这场论坛，亚洲各地的华文教育人都会去。</p>
@@ -1440,7 +1545,7 @@
 
     <div class="recap-grid">
       <div class="recap-photo reveal">
-        <img src="recap-1-welcome.jpg" alt="2025 半亩天光教育研学团 旱稻田艺术幼儿园" loading="lazy">
+        <img src="images/recap-1-welcome.jpg" alt="2025 半亩天光教育研学团 旱稻田艺术幼儿园" loading="lazy">
         <div class="recap-caption">
           走进台湾的幼儿园
           <span class="place">旱稻田艺术幼儿园</span>
@@ -1448,7 +1553,7 @@
       </div>
 
       <div class="recap-photo reveal">
-        <img src="recap-3-pinxuetang.jpg" alt="2025 走进品学堂办公室" loading="lazy">
+        <img src="images/recap-3-pinxuetang.jpg" alt="2025 走进品学堂办公室" loading="lazy">
         <div class="recap-caption">
           走进品学堂办公室
           <span class="place">Wisdom Hall · 品学堂</span>
@@ -1456,7 +1561,7 @@
       </div>
 
       <div class="recap-photo reveal">
-        <img src="recap-4-parenting.jpg" alt="2025 拜访亲子天下编辑部" loading="lazy">
+        <img src="images/recap-4-parenting.jpg" alt="2025 拜访亲子天下编辑部" loading="lazy">
         <div class="recap-caption">
           拜访亲子天下编辑部
           <span class="place">CommonWealth · 亲子天下</span>
@@ -1479,7 +1584,7 @@
         <div class="highlight-num">01</div>
         <span class="highlight-day">12 / 12 — 13</span>
         <h3 class="highlight-zh">国际阅读论坛</h3>
-        <p class="highlight-en">International Reading Forum · Theme: AI &amp; Precision Teaching</p>
+        <p class="highlight-en">International Reading Forum · AI &amp; Precision Teaching</p>
         <p class="highlight-text">由黄国珍老师主持，2026 年主题「AI 与精准教学」。两整天，与亚洲华文教育同行一同探问 AI 时代下的教学未来。</p>
       </div>
 
@@ -1488,7 +1593,7 @@
         <span class="highlight-day">12 / 14 — 15</span>
         <h3 class="highlight-zh">品学堂深度参访</h3>
         <p class="highlight-en">Inside the Reading Literacy Lab</p>
-        <p class="highlight-text">品学堂是台湾"阅读理解"教学方法的研发地。我们走进他们的工作现场，看他们怎么开发教材、怎么设计课程、怎么把"精准教学"从理念落到课堂上每一个孩子身上。这一站，是自己跑团进不去的。</p>
+        <p class="highlight-text">走进品学堂工作现场，看他们怎么开发教材、设计课程、把"精准教学"落到课堂上。这一站，自己跑团进不去。</p>
       </div>
 
       <div class="highlight-card reveal">
@@ -1496,7 +1601,7 @@
         <span class="highlight-day">12 / 14 — 15</span>
         <h3 class="highlight-zh">两所学校 · 课堂现场</h3>
         <p class="highlight-en">Inside Taiwan Classrooms</p>
-        <p class="highlight-text">不是走马观花拍照打卡。是真的进课室，看老师怎么备课、怎么发问、怎么跟孩子互动。一天看两所学校，每一所风格都不一样。</p>
+        <p class="highlight-text">真的进课室，看老师怎么备课、怎么发问、怎么跟孩子互动。一天看两所学校，每一所风格都不一样。</p>
       </div>
 
       <div class="highlight-card reveal">
@@ -1504,7 +1609,7 @@
         <span class="highlight-day">12 / 14 — 15</span>
         <h3 class="highlight-zh">绘本深度阅读专题</h3>
         <p class="highlight-en">Picture Book Reading Masterclass</p>
-        <p class="highlight-text">绘本不只是给小孩看图的，是教他们认识世界的第一本课本。这堂专题讲座会让你重新看绘本——以后自己上课、自己选绘本，眼光会不一样。</p>
+        <p class="highlight-text">绘本是孩子认识世界的第一本课本。这堂讲座会让你重新看绘本——以后选绘本、上绘本课，眼光不一样。</p>
       </div>
     </div>
   </div>
@@ -1588,90 +1693,116 @@
   </div>
 </section>
 
-<!-- ============ STATUS NOTICE ============ -->
-<section class="status-notice">
+<!-- ============ ABOUT THIS JOURNEY (merged: Status + Inclusion) ============ -->
+<section class="about-journey">
   <div class="container">
-    <div class="status-card reveal">
-      <div class="status-eyebrow">— Planning Status —</div>
-      <h2 class="status-title">关于这趟行程</h2>
-
-      <p class="status-intro">
-        这趟「六日台北 · 阅读远行」目前是<strong style="color:var(--terra);font-weight:500;">初步规划版本</strong>。我们想先把蓝图分享给你，让有兴趣的伙伴可以先了解、先报名。
+    <div class="about-header reveal">
+      <div class="about-eyebrow">— About This Journey —</div>
+      <h2 class="about-title">关于这趟行程</h2>
+      <p class="about-intro">
+        这趟「六日台北 · 阅读远行」<strong>已正式启动招募</strong>。主轴已经定下，最后细节正在确认中。<br>
+        以下是已经确定的内容、还在沟通的部分、以及费用安排。
       </p>
+    </div>
 
-      <div class="status-list-block">
-        <div class="status-list-label">已经确定的</div>
-        <ul class="status-list confirmed">
-          <li>国际阅读论坛 · 12 月 12–13 日</li>
+    <div class="about-grid">
+      <!-- 已确定 + 沟通中 -->
+      <div class="about-block reveal">
+        <div class="about-block-label">已确定 ✓</div>
+        <ul class="about-list confirmed">
+          <li>国际阅读论坛 · 12/12–13</li>
           <li>品学堂深度参访</li>
-          <li>绘本深度阅读专题（讲者已邀请，敬请期待）</li>
+          <li>绘本深度阅读专题<span class="muted-hint">（讲者已邀请，敬请期待）</span></li>
           <li>活动费 RM 1,800 / 人</li>
         </ul>
-      </div>
 
-      <div class="status-list-block">
-        <div class="status-list-label">还在沟通确认中</div>
-        <ul class="status-list pending">
+        <div class="about-block-label" style="margin-top:32px;">沟通中 ·</div>
+        <ul class="about-list pending">
           <li>两所学校参访（接洽中）</li>
           <li>绘本讲座题目（沟通中）</li>
-          <li>论坛 2026 年的官方议程（待品学堂正式公布）</li>
+          <li>论坛 2026 官方议程（待品学堂公布）</li>
         </ul>
       </div>
 
-      <div class="status-footer">
-        报名后，我们会陆续把最新资讯透过 <strong>WhatsApp 群组</strong>发给你。如果你看了行程觉得心动，欢迎现在就加入；最终的细节安排，我们一起期待。
+      <!-- 含 / 不含 -->
+      <div class="about-block reveal">
+        <div class="about-block-label">RM 1,800 含</div>
+        <ul class="about-list confirmed">
+          <li>国际阅读论坛报名协调</li>
+          <li>品学堂参访 · 学校参访</li>
+          <li>绘本讲座 · 全程领队</li>
+          <li>行前说明 · 行程对接</li>
+        </ul>
+
+        <div class="about-block-label" style="margin-top:32px;">不含</div>
+        <ul class="about-list excluded">
+          <li>机票 · 酒店 · 餐食 · 当地交通</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 协助说明 -->
+    <div class="about-help reveal">
+      <div class="about-help-title">我们可以协助你的</div>
+      <div class="about-help-row">
+        <strong>机票与酒店：</strong>可一起订购，按实际费用收取，不加价。
+      </div>
+      <div class="about-help-row">
+        <strong>当地交通：</strong>团员自行搭德士；行程间我们会同进同出。
+      </div>
+      <div class="about-help-row">
+        <strong>餐食：</strong>自理；我们会推荐每天的吃饭地点。
+      </div>
+      <div class="about-help-footer">
+        报名后，我们会透过 <strong>WhatsApp 群组</strong>给你最新资讯。
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ INCLUSION ============ -->
-<section class="inclusion">
+<!-- ============ FAQ ============ -->
+<section class="faq">
   <div class="container">
-    <div class="inclusion-header reveal">
-      <h2 class="inclusion-title">关于费用与安排</h2>
-      <p class="inclusion-sub">— what's included, what's not —</p>
+    <div class="faq-header reveal">
+      <h2 class="faq-title">常见问题</h2>
+      <p class="faq-sub">— before you join us —</p>
     </div>
 
-    <div class="inclusion-grid">
-      <div class="inclusion-box reveal">
-        <div class="inclusion-box-label">活动费 RM 1,800 含</div>
-        <ul>
-          <li>国际阅读论坛报名协调</li>
-          <li>品学堂深度参访</li>
-          <li>学校参访安排</li>
-          <li>绘本讲座</li>
-          <li>全程领队</li>
-          <li>行前说明会</li>
-          <li>行程协调与对接</li>
-        </ul>
-      </div>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary class="faq-question">报名后什么时候付钱？要付多少订金？</summary>
+        <div class="faq-answer">
+          报名后我们会通过 WhatsApp 与你确认资料，并提供银行户口资料。订金 <strong>RM 500</strong> 用以锁定名额，余额于行前两个月内缴清。具体安排我们会一对一沟通，让你安心。
+        </div>
+      </details>
 
-      <div class="inclusion-box excluded reveal">
-        <div class="inclusion-box-label">不含</div>
-        <ul>
-          <li>机票</li>
-          <li>酒店</li>
-          <li>餐食</li>
-          <li>当地交通（德士）</li>
-        </ul>
-      </div>
-    </div>
+      <details class="faq-item reveal">
+        <summary class="faq-question">如果后来不能去了，可以退款吗？</summary>
+        <div class="faq-answer">
+          <strong>行前 60 天前取消</strong>，可全额退款（订金除外）；超过此期限，原则上不退款，但如果你能找到人接替你的位置，我们可以协助转让。
+        </div>
+      </details>
 
-    <div class="inclusion-help reveal">
-      <div class="inclusion-help-title">我们可以协助你的</div>
+      <details class="faq-item reveal">
+        <summary class="faq-question">机票什么时候订比较好？早到晚回可以吗？</summary>
+        <div class="faq-answer">
+          建议尽早订票，越早越便宜。我们也提供<strong>统一订票服务</strong>，按实际价格收取不加价。如果想<strong>早到晚回</strong>自由活动，完全可以——只要 12/11 前抵达台北、12/16 后再离开即可。
+        </div>
+      </details>
 
-      <div class="inclusion-help-row">
-        <strong>机票与酒店：</strong>可以和我们一起订购，按实际费用收取，不另外加价。具体安排，欢迎 WhatsApp 私信沟通。
-      </div>
+      <details class="faq-item reveal">
+        <summary class="faq-question">几个学校老师一起报名，有团体优惠吗？</summary>
+        <div class="faq-answer">
+          有的。<strong>同校 3 位以上</strong>一起报名，每位仅 <strong>RM 1,500</strong>（原价 RM 1,800）。我们也可以为学校提供专属的"教师专业发展"参与证明，方便老师向学校申请进修。
+        </div>
+      </details>
 
-      <div class="inclusion-help-row">
-        <strong>当地交通：</strong>台北交通非常方便，团员都自行搭德士移动；行程之间我们会同进同出，不会让你迷路。
-      </div>
-
-      <div class="inclusion-help-row">
-        <strong>餐食：</strong>自理。我们会推荐每天的吃饭地点，喜欢一起吃就一起，想自己探店也很自由。
-      </div>
+      <details class="faq-item reveal">
+        <summary class="faq-question">活动期间会有 WhatsApp 群组吗？</summary>
+        <div class="faq-answer">
+          有。报名确认后我们会拉你进<strong>专属团员群组</strong>，让你认识同行伙伴、第一时间获取行程更新、行前注意事项、当地实用信息。出发前你已经有了一群志同道合的朋友。
+        </div>
+      </details>
     </div>
   </div>
 </section>
@@ -1710,13 +1841,13 @@
 
     <div class="companions-grid">
       <div class="companions-photo reveal">
-        <img src="recap-2-classroom.jpg" alt="2025 走进台湾课堂参访" loading="lazy">
+        <img src="images/recap-2-classroom.jpg" alt="2025 走进台湾课堂参访" loading="lazy">
       </div>
       <div class="companions-photo reveal">
-        <img src="recap-5-picturebooks.jpg" alt="2025 绘本工作坊" loading="lazy">
+        <img src="images/recap-5-picturebooks.jpg" alt="2025 绘本工作坊" loading="lazy">
       </div>
       <div class="companions-photo reveal">
-        <img src="recap-6-coffeechat.jpg" alt="2025 团内交流讨论" loading="lazy">
+        <img src="images/recap-6-coffeechat.jpg" alt="2025 团内交流讨论" loading="lazy">
       </div>
     </div>
   </div>
@@ -1734,7 +1865,10 @@
         <div class="cta-info-label">活 动 费</div>
         <div class="cta-info-value">
           <span class="price-amount">RM 1,800 / 人</span>
-          <span class="price-detail">详细包含项目，请见上方「关于费用与安排」</span>
+          <span class="price-detail">
+            同校 3 位以上报名，每位 <strong style="color:var(--cream);">RM 1,500</strong><br>
+            <span style="opacity:0.7;">详细包含项目，请见上方「关于费用与安排」</span>
+          </span>
         </div>
       </div>
       <div class="cta-info-row">
@@ -1751,7 +1885,7 @@
       </div>
     </div>
 
-    <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="cta-button">联 络 报 名</a>
+    <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="cta-button">立 即 报 名</a>
     <span class="cta-secondary">愿我们带回来的，不止是笔记。</span>
   </div>
 </section>

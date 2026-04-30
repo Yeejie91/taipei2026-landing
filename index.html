@@ -1071,6 +1071,240 @@
       height: 280px;
     }
   }
+
+  /* ============ Status Notice Section ============ */
+  .status-notice {
+    background: var(--cream);
+    padding: 100px 0;
+  }
+
+  .status-card {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--cream-dark);
+    border-left: 3px solid var(--terra);
+    padding: 50px 50px 50px 56px;
+    position: relative;
+  }
+
+  @media (max-width: 600px) {
+    .status-card {
+      padding: 40px 28px 40px 32px;
+    }
+  }
+
+  .status-eyebrow {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    color: var(--terra);
+    margin-bottom: 12px;
+  }
+
+  .status-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: clamp(22px, 3vw, 28px);
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+
+  .status-intro {
+    font-size: 17px;
+    line-height: 2;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+  }
+
+  .status-list-block {
+    margin-bottom: 28px;
+  }
+
+  .status-list-label {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: var(--terra);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+
+  .status-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .status-list li {
+    padding: 8px 0 8px 28px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    position: relative;
+  }
+
+  .status-list.confirmed li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: var(--terra);
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .status-list.pending li::before {
+    content: '·';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    color: var(--muted);
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .status-footer {
+    border-top: 1px solid var(--paper-line);
+    padding-top: 24px;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--ink-soft);
+  }
+
+  .status-footer strong {
+    color: var(--terra);
+    font-weight: 500;
+  }
+
+  /* ============ Inclusion Section ============ */
+  .inclusion {
+    background: var(--cream-dark);
+    padding: 100px 0;
+  }
+
+  .inclusion-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .inclusion-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: clamp(26px, 3.6vw, 38px);
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+
+  .inclusion-sub {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--muted);
+  }
+
+  .inclusion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 920px;
+    margin: 0 auto 40px;
+  }
+
+  @media (max-width: 700px) {
+    .inclusion-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  .inclusion-box {
+    background: var(--cream);
+    padding: 36px 32px;
+    border-top: 3px solid var(--terra);
+  }
+
+  .inclusion-box.excluded {
+    border-top-color: var(--muted);
+  }
+
+  .inclusion-box-label {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    color: var(--terra);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+
+  .inclusion-box.excluded .inclusion-box-label {
+    color: var(--muted);
+  }
+
+  .inclusion-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .inclusion-box ul li {
+    padding: 8px 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    border-bottom: 1px dashed var(--paper-line);
+  }
+
+  .inclusion-box ul li:last-child {
+    border-bottom: none;
+  }
+
+  .inclusion-help {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--cream);
+    padding: 36px 40px;
+    border-left: 3px solid var(--terra);
+  }
+
+  @media (max-width: 600px) {
+    .inclusion-help {
+      padding: 28px 24px;
+    }
+  }
+
+  .inclusion-help-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .inclusion-help-row {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--paper-line);
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+  }
+
+  .inclusion-help-row:last-child {
+    border-bottom: none;
+  }
+
+  .inclusion-help-row strong {
+    color: var(--terra);
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 6px;
+  }
 </style>
 </head>
 <body>
@@ -1206,7 +1440,7 @@
 
     <div class="recap-grid">
       <div class="recap-photo reveal">
-        <img src="recap-1-welcome.jpg" alt="2025 半亩天光教育研学团 旱稻田艺术幼儿园" loading="lazy">
+        <img src="images/recap-1-welcome.jpg" alt="2025 半亩天光教育研学团 旱稻田艺术幼儿园" loading="lazy">
         <div class="recap-caption">
           走进台湾的幼儿园
           <span class="place">旱稻田艺术幼儿园</span>
@@ -1214,7 +1448,7 @@
       </div>
 
       <div class="recap-photo reveal">
-        <img src="recap-3-pinxuetang.jpg" alt="2025 走进品学堂办公室" loading="lazy">
+        <img src="images/recap-3-pinxuetang.jpg" alt="2025 走进品学堂办公室" loading="lazy">
         <div class="recap-caption">
           走进品学堂办公室
           <span class="place">Wisdom Hall · 品学堂</span>
@@ -1222,7 +1456,7 @@
       </div>
 
       <div class="recap-photo reveal">
-        <img src="recap-4-parenting.jpg" alt="2025 拜访亲子天下Club" loading="lazy">
+        <img src="images/recap-4-parenting.jpg" alt="2025 拜访亲子天下编辑部" loading="lazy">
         <div class="recap-caption">
           拜访亲子天下编辑部
           <span class="place">CommonWealth · 亲子天下</span>
@@ -1354,6 +1588,94 @@
   </div>
 </section>
 
+<!-- ============ STATUS NOTICE ============ -->
+<section class="status-notice">
+  <div class="container">
+    <div class="status-card reveal">
+      <div class="status-eyebrow">— Planning Status —</div>
+      <h2 class="status-title">关于这趟行程</h2>
+
+      <p class="status-intro">
+        这趟「六日台北 · 阅读远行」目前是<strong style="color:var(--terra);font-weight:500;">初步规划版本</strong>。我们想先把蓝图分享给你，让有兴趣的伙伴可以先了解、先报名。
+      </p>
+
+      <div class="status-list-block">
+        <div class="status-list-label">已经确定的</div>
+        <ul class="status-list confirmed">
+          <li>国际阅读论坛 · 12 月 12–13 日</li>
+          <li>品学堂深度参访</li>
+          <li>绘本深度阅读专题（讲者已邀请，敬请期待）</li>
+          <li>活动费 RM 1,800 / 人</li>
+        </ul>
+      </div>
+
+      <div class="status-list-block">
+        <div class="status-list-label">还在沟通确认中</div>
+        <ul class="status-list pending">
+          <li>两所学校参访（接洽中）</li>
+          <li>绘本讲座题目（沟通中）</li>
+          <li>论坛 2026 年的官方议程（待品学堂正式公布）</li>
+        </ul>
+      </div>
+
+      <div class="status-footer">
+        报名后，我们会陆续把最新资讯透过 <strong>WhatsApp 群组</strong>发给你。如果你看了行程觉得心动，欢迎现在就加入；最终的细节安排，我们一起期待。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INCLUSION ============ -->
+<section class="inclusion">
+  <div class="container">
+    <div class="inclusion-header reveal">
+      <h2 class="inclusion-title">关于费用与安排</h2>
+      <p class="inclusion-sub">— what's included, what's not —</p>
+    </div>
+
+    <div class="inclusion-grid">
+      <div class="inclusion-box reveal">
+        <div class="inclusion-box-label">活动费 RM 1,800 含</div>
+        <ul>
+          <li>国际阅读论坛报名协调</li>
+          <li>品学堂深度参访</li>
+          <li>学校参访安排</li>
+          <li>绘本讲座</li>
+          <li>全程领队</li>
+          <li>行前说明会</li>
+          <li>行程协调与对接</li>
+        </ul>
+      </div>
+
+      <div class="inclusion-box excluded reveal">
+        <div class="inclusion-box-label">不含</div>
+        <ul>
+          <li>机票</li>
+          <li>酒店</li>
+          <li>餐食</li>
+          <li>当地交通（德士）</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="inclusion-help reveal">
+      <div class="inclusion-help-title">我们可以协助你的</div>
+
+      <div class="inclusion-help-row">
+        <strong>机票与酒店：</strong>可以和我们一起订购，按实际费用收取，不另外加价。具体安排，欢迎 WhatsApp 私信沟通。
+      </div>
+
+      <div class="inclusion-help-row">
+        <strong>当地交通：</strong>台北交通非常方便，团员都自行搭德士移动；行程之间我们会同进同出，不会让你迷路。
+      </div>
+
+      <div class="inclusion-help-row">
+        <strong>餐食：</strong>自理。我们会推荐每天的吃饭地点，喜欢一起吃就一起，想自己探店也很自由。
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ AUDIENCE ============ -->
 <section class="audience">
   <div class="container-narrow">
@@ -1388,13 +1710,13 @@
 
     <div class="companions-grid">
       <div class="companions-photo reveal">
-        <img src="recap-2-classroom.jpg" alt="2025 走进台湾课堂参访" loading="lazy">
+        <img src="images/recap-2-classroom.jpg" alt="2025 走进台湾课堂参访" loading="lazy">
       </div>
       <div class="companions-photo reveal">
-        <img src="recap-5-picturebooks.jpg" alt="2025 绘本工作坊" loading="lazy">
+        <img src="images/recap-5-picturebooks.jpg" alt="2025 绘本工作坊" loading="lazy">
       </div>
       <div class="companions-photo reveal">
-        <img src="recap-6-coffeechat.jpg" alt="2025 团内交流讨论" loading="lazy">
+        <img src="images/recap-6-coffeechat.jpg" alt="2025 团内交流讨论" loading="lazy">
       </div>
     </div>
   </div>
@@ -1412,11 +1734,7 @@
         <div class="cta-info-label">活 动 费</div>
         <div class="cta-info-value">
           <span class="price-amount">RM 1,800 / 人</span>
-          <span class="price-detail">
-            含活动费用 · 不含机票、酒店、餐食<br>
-            台北交通和住宿都非常方便，大家可以自行安排，<br>
-            或者跟随大队一起移动。
-          </span>
+          <span class="price-detail">详细包含项目，请见上方「关于费用与安排」</span>
         </div>
       </div>
       <div class="cta-info-row">

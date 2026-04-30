@@ -809,16 +809,16 @@
     .stamp-inner .bot { font-size: 7px; }
   }
 
-  /* ============ Past Edition (2025 Recap) ============ */
+  /* ============ Past Edition (2025 Recap) — Simple image version ============ */
   .past-edition {
     background: var(--cream-dark);
-    padding: 120px 0;
+    padding: 100px 0;
     position: relative;
   }
 
   .past-edition-header {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 
   .past-eyebrow-row {
@@ -826,7 +826,7 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .past-eyebrow-row .line {
@@ -846,234 +846,48 @@
   .past-section-title {
     font-family: 'Noto Serif SC', serif;
     font-weight: 500;
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: clamp(26px, 3.6vw, 38px);
     letter-spacing: 0.1em;
-    line-height: 1.4;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    color: var(--ink);
   }
 
   .past-section-sub {
     font-family: 'Noto Serif SC', serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 17px;
     color: var(--muted);
-    line-height: 1.8;
+    margin-top: 14px;
   }
 
-  .past-theme-card {
-    max-width: 720px;
-    margin: 0 auto 80px;
-    text-align: center;
-    padding: 50px 40px;
-    border: 1px solid var(--paper-line);
-    background: var(--cream);
-    position: relative;
-  }
-
-  .past-theme-card::before,
-  .past-theme-card::after {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    border: 1px solid var(--terra);
-  }
-  .past-theme-card::before {
-    top: -6px;
-    left: -6px;
-    border-right: none;
-    border-bottom: none;
-  }
-  .past-theme-card::after {
-    bottom: -6px;
-    right: -6px;
-    border-left: none;
-    border-top: none;
-  }
-
-  .past-theme-year {
-    font-family: 'Italiana', serif;
-    font-size: 48px;
-    color: var(--terra);
-    line-height: 1;
-    margin-bottom: 12px;
-  }
-
-  .past-theme-label {
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.4em;
-    color: var(--muted);
-    margin-bottom: 28px;
-  }
-
-  .past-theme-name {
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 600;
-    font-size: clamp(22px, 3vw, 30px);
-    letter-spacing: 0.1em;
-    line-height: 1.5;
-    color: var(--ink);
-    margin-bottom: 16px;
-  }
-
-  .past-theme-meta {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-size: 16px;
-    color: var(--muted);
-  }
-
-  .past-theme-free {
-    display: inline-block;
-    margin-top: 20px;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 13px;
-    letter-spacing: 0.2em;
-    color: var(--terra);
-    border-top: 1px solid var(--terra);
-    padding-top: 12px;
-  }
-
-  .past-speakers-title {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  .past-speakers-title h3 {
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 500;
-    font-size: 28px;
-    letter-spacing: 0.1em;
-    color: var(--ink);
-    margin-bottom: 8px;
-  }
-
-  .past-speakers-title p {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-size: 16px;
-    color: var(--muted);
-  }
-
-  .past-speakers-grid {
+  .past-images {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px 60px;
-    max-width: 900px;
-    margin: 0 auto 60px;
-  }
-
-  @media (max-width: 700px) {
-    .past-speakers-grid {
-      grid-template-columns: 1fr;
-      gap: 28px;
-    }
-  }
-
-  .past-speaker {
-    border-left: 2px solid var(--terra);
-    padding: 4px 0 4px 20px;
-  }
-
-  .past-speaker.intl {
-    border-left-color: var(--ink);
-  }
-
-  .past-speaker .name {
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 600;
-    font-size: 19px;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-
-  .past-speaker .role {
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  .past-speaker .badge {
-    display: inline-block;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--terra);
-    padding: 2px 10px;
-    border: 1px solid var(--terra);
-    margin-bottom: 8px;
-  }
-
-  .past-speaker.intl .badge {
-    color: var(--ink);
-    border-color: var(--ink);
-  }
-
-  /* Stats row */
-  .past-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto 60px;
-    padding: 40px 0;
-    border-top: 1px solid var(--paper-line);
-    border-bottom: 1px solid var(--paper-line);
-  }
-
-  @media (max-width: 600px) {
-    .past-stats {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px 20px;
-    }
-  }
-
-  .past-stat {
-    text-align: center;
-  }
-
-  .past-stat .num {
-    font-family: 'Italiana', serif;
-    font-size: 44px;
-    color: var(--terra);
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-
-  .past-stat .label {
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 13px;
-    letter-spacing: 0.2em;
-    color: var(--muted);
-  }
-
-  .past-bridge {
-    text-align: center;
-    max-width: 600px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
     margin: 0 auto;
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 300;
-    font-size: clamp(18px, 2.2vw, 22px);
-    line-height: 2;
-    color: var(--ink);
-    padding: 40px 0 0;
-    position: relative;
   }
 
-  .past-bridge::before {
-    content: '';
+  @media (max-width: 768px) {
+    .past-images {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 500px;
+    }
+  }
+
+  .past-images img {
+    width: 100%;
+    height: auto;
     display: block;
-    width: 40px;
-    height: 1px;
-    background: var(--terra);
-    margin: 0 auto 30px;
+    border: 1px solid var(--paper-line);
+    box-shadow: 0 6px 24px rgba(38, 33, 28, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
 
-  .past-bridge strong {
-    color: var(--terra);
-    font-weight: 500;
+  .past-images img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(38, 33, 28, 0.12);
   }
 </style>
 </head>
@@ -1188,100 +1002,15 @@
         <span class="text">Previous Edition · 2025</span>
         <span class="line"></span>
       </div>
-      <h2 class="past-section-title">这场论坛<br>不是第一次办</h2>
+      <h2 class="past-section-title">2025 往届回顾</h2>
       <p class="past-section-sub">让你看看，去年的论坛长什么样</p>
     </div>
 
-    <!-- 2025 主题卡 -->
-    <div class="past-theme-card reveal">
-      <div class="past-theme-year">2025</div>
-      <div class="past-theme-label">阅 读 未 来 · 国 际 教 育 论 坛</div>
-      <h3 class="past-theme-name">AI 时代的对话与生成</h3>
-      <p class="past-theme-meta">两整天议程 · 七场主题演讲 · 三场座谈</p>
-      <div class="past-theme-free">免 费 参 加 · 由 品 学 堂 主 办</div>
+    <div class="past-images">
+      <img src="images/recap-cover.png" alt="2025 阅读未来国际教育论坛 主题封面" loading="lazy">
+      <img src="images/recap-day1.png" alt="2025 论坛 12/13 议程" loading="lazy">
+      <img src="images/recap-day2.png" alt="2025 论坛 12/14 议程" loading="lazy">
     </div>
-
-    <!-- 讲者阵容 -->
-    <div class="past-speakers-title reveal">
-      <h3>2025 讲者阵容</h3>
-      <p class="latin-italic">— a glimpse of last year's speakers —</p>
-    </div>
-
-    <div class="past-speakers-grid">
-      <div class="past-speaker reveal">
-        <div class="badge">主 持</div>
-        <div class="name">黄国珍 老师</div>
-        <div class="role">品学堂 创办人</div>
-      </div>
-
-      <div class="past-speaker intl reveal">
-        <div class="badge">国 际 讲 者</div>
-        <div class="name">张博 主任</div>
-        <div class="role">新加坡 南洋女中 资讯科</div>
-      </div>
-
-      <div class="past-speaker reveal">
-        <div class="badge">主 题 演 讲</div>
-        <div class="name">蔡炎龙 学务长</div>
-        <div class="role">国立政治大学</div>
-      </div>
-
-      <div class="past-speaker reveal">
-        <div class="badge">主 题 演 讲</div>
-        <div class="name">陈明蕾 老师</div>
-        <div class="role">国立清华大学<br>台湾语言研究与教学研究所 教授</div>
-      </div>
-
-      <div class="past-speaker reveal">
-        <div class="badge">主 题 演 讲</div>
-        <div class="name">刘桂光 理事长</div>
-        <div class="role">点亮生命教育协会</div>
-      </div>
-
-      <div class="past-speaker reveal">
-        <div class="badge">主 题 演 讲</div>
-        <div class="name">蓝伟莹 老师</div>
-        <div class="role">萤光教育协会 创办人</div>
-      </div>
-
-      <div class="past-speaker reveal">
-        <div class="badge">主 题 演 讲</div>
-        <div class="name">施信源 主任</div>
-        <div class="role">新北市云端智慧中心 龙埔办公室</div>
-      </div>
-
-      <div class="past-speaker reveal">
-        <div class="badge">课 程 分 享</div>
-        <div class="name">EduStar 教育极星奖</div>
-        <div class="role">得奖课程 · AI 协作教学课程博览会</div>
-      </div>
-    </div>
-
-    <!-- Stats -->
-    <div class="past-stats reveal">
-      <div class="past-stat">
-        <div class="num">2</div>
-        <div class="label">天 议 程</div>
-      </div>
-      <div class="past-stat">
-        <div class="num">7</div>
-        <div class="label">主 题 演 讲</div>
-      </div>
-      <div class="past-stat">
-        <div class="num">3</div>
-        <div class="label">跨 界 座 谈</div>
-      </div>
-      <div class="past-stat">
-        <div class="num">8+</div>
-        <div class="label">资 深 讲 者</div>
-      </div>
-    </div>
-
-    <!-- Bridge to 2026 -->
-    <p class="past-bridge reveal">
-      2025 年的他们，谈 AI 时代的<strong>对话与生成</strong>。<br>
-      2026 年的论坛，会带我们走得更远。
-    </p>
   </div>
 </section>
 

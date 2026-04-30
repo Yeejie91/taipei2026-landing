@@ -62,7 +62,7 @@
     font-family: 'Instrument Serif', 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
-    }
+  }
 
   .latin-display {
     font-family: 'Italiana', 'Cormorant Garamond', serif;
@@ -191,10 +191,19 @@
 
   .hero-subtitle {
     font-family: 'Noto Serif SC', serif;
-    font-weight: 300;
+    font-weight: 500;
     font-size: clamp(20px, 3vw, 36px);
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .hero-subsubtitle {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: clamp(15px, 2vw, 20px);
+    letter-spacing: 0.3em;
+    color: var(--muted);
     margin-bottom: 60px;
   }
 
@@ -449,6 +458,71 @@
     margin-bottom: 1em;
   }
 
+  /* ============ Exclusive Access (above highlights) ============ */
+  .exclusive-access {
+    max-width: 700px;
+    margin: 0 auto 70px;
+    padding: 36px 40px;
+    background: var(--cream-dark);
+    border: 1px solid var(--paper-line);
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .exclusive-access {
+      padding: 28px 24px;
+    }
+  }
+
+  .exclusive-label {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    color: var(--terra);
+    margin-bottom: 22px;
+  }
+
+  .exclusive-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 24px;
+    max-width: 480px;
+    text-align: left;
+  }
+
+  .exclusive-list li {
+    padding: 8px 0;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .exclusive-list .check {
+    color: var(--terra);
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .exclusive-note {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--paper-line);
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--ink);
+  }
+
+  .exclusive-note strong {
+    color: var(--terra);
+    font-weight: 500;
+  }
+
   /* ============ Highlights Grid ============ */
   .highlights {
     background: var(--cream);
@@ -624,6 +698,24 @@
     transform: rotate(45deg);
   }
 
+  .audience-positioning {
+    max-width: 600px;
+    margin: 60px auto 0;
+    padding-top: 40px;
+    border-top: 1px solid var(--paper-line);
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 2;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+
+  .audience-positioning strong {
+    color: var(--terra);
+    font-weight: 500;
+  }
+
   /* ============ CTA / Registration ============ */
   .cta {
     background: var(--ink);
@@ -707,6 +799,17 @@
     color: var(--pale);
     margin-top: 8px;
     line-height: 1.7;
+  }
+
+  .price-context-note {
+    display: block;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(236, 228, 213, 0.12);
+    font-size: 13px;
+    color: var(--pale);
+    line-height: 1.85;
+    font-style: italic;
   }
 
   .cta-button {
@@ -1079,7 +1182,7 @@
     font-size: 17px;
     color: var(--ink-soft);
     line-height: 1.9;
-    margin-bottom: 60px;
+    margin-bottom: 0;
     max-width: 580px;
   }
 
@@ -1091,6 +1194,68 @@
     line-height: 1;
     margin: 0 6px;
     vertical-align: -4px;
+  }
+
+  .companions-quote {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+    margin: 30px auto 40px;
+    letter-spacing: 0.05em;
+    position: relative;
+  }
+
+  .companions-quote .quote-mark {
+    color: var(--terra);
+    font-family: 'Italiana', serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0 8px;
+    opacity: 0.8;
+    vertical-align: -4px;
+  }
+
+  .companions-after {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 2.1;
+    color: var(--ink-soft);
+    margin-bottom: 50px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .companions-after strong {
+    color: var(--terra);
+    font-weight: 500;
+  }
+
+  .companions-cap {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--ink);
+    margin-bottom: 60px;
+    padding-top: 28px;
+    border-top: 1px solid var(--paper-line);
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .companions-cap .cap-detail {
+    display: block;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--muted);
+    margin-top: 6px;
+    font-style: italic;
   }
 
   .companions-grid {
@@ -1410,7 +1575,7 @@
     <a href="#top" class="nav-brand">
       Taiwan Reading <span class="dot">·</span> Journey
     </a>
-    <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="nav-cta">立 即 报 名</a>
+    <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="nav-cta">立 即 锁 位</a>
   </div>
 </nav>
 
@@ -1424,7 +1589,8 @@
     <div class="hero-dot"></div>
 
     <h1 class="hero-title reveal">六日台北</h1>
-    <p class="hero-subtitle reveal">一 场 关 于 阅 读 的 远 行</p>
+    <p class="hero-subtitle reveal">A I  时 代，不 要 浪 费 时 间 等 待</p>
+    <p class="hero-subsubtitle reveal">一 场 关 于 教 学 的 远 行</p>
 
     <!-- Mountain landscape SVG -->
     <div class="hero-landscape reveal">
@@ -1457,7 +1623,7 @@
 
     <div class="hero-status reveal">
       <span class="hero-status-dot"></span>
-      正 在 招 募 · 限 30 位 · 额 满 即 止
+      正 在 招 募 · 限 25 位 · 额 满 即 止
     </div>
   </div>
 </header>
@@ -1471,26 +1637,28 @@
     <h2 class="section-title reveal">为什么我们这次<br>要去台北</h2>
 
     <p class="intro-trust-line reveal">
-      这是我们第二年办了。<br>
       <strong>2025 年，22 位新马教育同行已经走过这一条路。</strong>
     </p>
 
     <div class="intro-text reveal">
-      <p>每年到了 12 月，台湾会办一场华文教育界的大事——<strong>国际阅读论坛</strong>，由品学堂的黄国珍老师主办。这场论坛，亚洲各地的华文教育人都会去。</p>
+      <p>AI 时代来了。</p>
 
-      <p>2026 年的主题，是一个我们这一代华文老师每天都在面对、却没几个人真正想清楚的问题：</p>
+      <p>我们这群华文老师，每天都在做太多事——改一百份作业、出一百份考卷、写一百份报告。</p>
+
+      <p>但我们都知道，自己一直没做到那件最重要的事：<strong>真正改变那个不读书的孩子。</strong></p>
+
+      <p>我们不是不努力。我们只是——<strong>不够精准。</strong></p>
     </div>
 
     <div class="pull-quote reveal">
-      AI 已经走进我们的课室了。<br>
-      我们要怎么用？怎么用得对？<br>
-      怎么用了之后，能真的帮到不同程度的孩子？
+      AI 时代，老师怎么做，<br>
+      才精准？
     </div>
 
     <div class="intro-text reveal">
-      <p>这不是台湾的问题，这是我们马来西亚华文老师每天都在面对的问题。</p>
+      <p>2026 年 12 月，台湾会办一场华文教育界的大事——<strong>国际阅读论坛</strong>，由品学堂主办，主题就是这个我们都在等的问题：<strong>AI 与精准教学</strong>。</p>
 
-      <p>所以这次，<strong>半亩天光</strong>看见老师们的需要，主办这趟<strong>「六日台北 · 阅读远行」</strong>，带新马的老师一起飞一趟。我们不只是去听论坛，我们是去看、去问、去把答案带回来。</p>
+      <p>半亩天光带你飞一趟。不是去拿东西回来用，是去——<strong>找回那个还相信教育能改变人的自己。</strong></p>
     </div>
   </div>
 </section>
@@ -1545,7 +1713,7 @@
 
     <div class="recap-grid">
       <div class="recap-photo reveal">
-        <img src="recap-1-welcome.jpg" alt="2025 半亩天光教育研学团 旱稻田艺术幼儿园" loading="lazy">
+        <img src="images/recap-1-welcome.jpg" alt="2025 半亩天光教育研学团 旱稻田艺术幼儿园" loading="lazy">
         <div class="recap-caption">
           走进台湾的幼儿园
           <span class="place">旱稻田艺术幼儿园</span>
@@ -1553,7 +1721,7 @@
       </div>
 
       <div class="recap-photo reveal">
-        <img src="recap-3-pinxuetang.jpg" alt="2025 走进品学堂办公室" loading="lazy">
+        <img src="images/recap-3-pinxuetang.jpg" alt="2025 走进品学堂办公室" loading="lazy">
         <div class="recap-caption">
           走进品学堂办公室
           <span class="place">Wisdom Hall · 品学堂</span>
@@ -1561,7 +1729,7 @@
       </div>
 
       <div class="recap-photo reveal">
-        <img src="recap-4-parenting.jpg" alt="2025 拜访亲子天下CLUB" loading="lazy">
+        <img src="images/recap-4-parenting.jpg" alt="2025 拜访亲子天下" loading="lazy">
         <div class="recap-caption">
           拜访亲子天下CLUB
           <span class="place">CommonWealth · 亲子天下</span>
@@ -1579,6 +1747,17 @@
     </div>
     <h2 class="section-title reveal">四 个 主 轴<br>构 成 一 趟 远 行</h2>
 
+    <div class="exclusive-access reveal">
+      <div class="exclusive-label">— 自 己 跑 团 做 不 到 的 事 —</div>
+      <ul class="exclusive-list">
+        <li><span class="check">✓</span> 品学堂办公室不接待个人参访</li>
+        <li><span class="check">✓</span> 台湾学校进课室观课，需正式邀约函</li>
+        <li><span class="check">✓</span> 与讲者近距离交流讨论</li>
+        <li><span class="check">✓</span> 知名绘本创作者亲自授课</li>
+      </ul>
+      <p class="exclusive-note">RM 1,800，买的不只是行程，更是一张<strong>通行证</strong>。</p>
+    </div>
+
     <div class="highlights-grid">
       <div class="highlight-card reveal">
         <div class="highlight-num">01</div>
@@ -1593,7 +1772,7 @@
         <span class="highlight-day">12 / 14 — 15</span>
         <h3 class="highlight-zh">品学堂深度参访</h3>
         <p class="highlight-en">Inside the Reading Literacy Lab</p>
-        <p class="highlight-text">走进品学堂工作现场，创办人直接分享，深度认识读写素养，把"精准教学"落到课堂上。这一站，自己跑团进不去。</p>
+        <p class="highlight-text">走进品学堂工作现场，深度认识读写素养，把"精准教学"落到课堂上。这一站，自己跑团进不去。</p>
       </div>
 
       <div class="highlight-card reveal">
@@ -1601,7 +1780,7 @@
         <span class="highlight-day">12 / 14 — 15</span>
         <h3 class="highlight-zh">两所学校 · 课堂现场</h3>
         <p class="highlight-en">Inside Taiwan Classrooms</p>
-        <p class="highlight-text">真的进课室，看老师怎么备课、怎么发问、怎么跟孩子互动。一天看两所学校，每一所风格都不一样。</p>
+        <p class="highlight-text">真的进课室，了解老师怎么备课、怎么发问、怎么跟孩子互动。一天看两所学校，每一所风格都不一样。</p>
       </div>
 
       <div class="highlight-card reveal">
@@ -1642,7 +1821,7 @@
         </div>
         <div class="schedule-content">
           国际阅读论坛 · 第一天
-          <span class="sub">主题：AI 与精准教学 · 晚上自由活动</span>
+          <span class="sub">主题：AI 与精准教学</span>
         </div>
       </div>
 
@@ -1711,14 +1890,15 @@
         <div class="about-block-label">已确定 ✓</div>
         <ul class="about-list confirmed">
           <li>国际阅读论坛 · 12/12–13</li>
-          <li>品学堂深度参访交流 - 读写素养</li>
+          <li>品学堂深度交流</li>
           <li>绘本深度阅读专题<span class="muted-hint">（讲者已邀请，敬请期待）</span></li>
-          <li>校园参访</li>
-         
+          <li>两所学校参访</li>
+          <li>活动费 RM 1,800 / 人</li>
         </ul>
 
         <div class="about-block-label" style="margin-top:32px;">沟通中 ·</div>
         <ul class="about-list pending">
+          <li>学校交流内容（接洽中）</li>
           <li>绘本讲座题目（沟通中）</li>
           <li>论坛 2026 官方议程（待品学堂公布）</li>
         </ul>
@@ -1745,10 +1925,10 @@
     <div class="about-help reveal">
       <div class="about-help-title">我们可以协助你的</div>
       <div class="about-help-row">
-        <strong>机票与酒店：</strong>可一起订购，按实际费用收取。
+        <strong>机票与酒店：</strong>可一起订购，按实际费用收取，不加价。（机票预计1500 - 2000；台北住宿比较高，一间房一般上RM300）
       </div>
       <div class="about-help-row">
-        <strong>当地交通：</strong>团员自行搭德士；行程间我们会同进同出。
+        <strong>当地交通：</strong>团员自行移动，可搭德士/巴士等；行程间我们会同进同出。
       </div>
       <div class="about-help-row">
         <strong>餐食：</strong>自理；我们会推荐每天的吃饭地点。
@@ -1772,14 +1952,14 @@
       <details class="faq-item reveal">
         <summary class="faq-question">报名后什么时候付钱？要付多少订金？</summary>
         <div class="faq-answer">
-          报名后我们会通过 WhatsApp 与你确认资料，并提供银行户口资料。订金 <strong>RM 500</strong> 用以锁定名额，余额于行前两个月内缴清。具体安排我们会一对一沟通，让你安心。
+          报名后我们会通过 WhatsApp 与你确认资料，并提供银行户口资料。订金 <strong>RM 500</strong> 用以锁定名额。具体安排我们会一对一沟通，让你安心。
         </div>
       </details>
 
       <details class="faq-item reveal">
         <summary class="faq-question">如果后来不能去了，可以退款吗？</summary>
         <div class="faq-answer">
-          <strong>行前 60 天前取消</strong>，可全额退款（订金除外）；超过此期限，原则上不退款，但如果你能找到人接替你的位置，我们可以协助转让。
+          <strong>行前 60 天前退出</strong>，可全额退款（订金除外）；超过此期限，原则上不退款，但如果你能找到人接替你的位置，我们可以协助转让。
         </div>
       </details>
 
@@ -1793,7 +1973,7 @@
       <details class="faq-item reveal">
         <summary class="faq-question">几个学校老师一起报名，有团体优惠吗？</summary>
         <div class="faq-answer">
-          有的。<strong>团报 3 位或以上</strong> 、 <strong>半亩天光会员</strong>一起报名，每位仅 <strong>RM 1,500</strong>（原价 RM 1,800）。我们也可以为学校提供专属的"教师专业发展"参与证明，方便老师向学校申请进修。
+          有的。<strong>同校 3 位以上</strong>一起报名，每位仅 <strong>RM 1,500</strong>（原价 RM 1,800）。我们也可以为学校提供专属的"教师专业发展"参与证明，方便老师向学校申请进修。
         </div>
       </details>
 
@@ -1822,6 +2002,11 @@
       <li>想知道 AI 怎么用在华文课的老师</li>
       <li>想给自己的教学加一点新东西的所有教育人</li>
     </ul>
+
+    <p class="audience-positioning reveal">
+      这趟旅程，是为<strong>愿意为自己的教学投资</strong>的老师设计的。<br>
+      我们不为所有人办——<strong>限额 25 位</strong>。
+    </p>
   </div>
 </section>
 
@@ -1834,9 +2019,26 @@
     <h2 class="companions-title reveal">与你同行的，<br>是这些教育人</h2>
 
     <p class="companions-stat reveal">
-      2025 年，<strong>22</strong> 位新马教育同行<br>
-      跟着我们一起走过这一条路。<br>
-      2026 年，名额限 30 位。
+      去年这一趟，<strong>22</strong> 位新马教师。<br>
+      飞回来的那一天，有一位老师在机场跟我说：
+    </p>
+
+    <p class="companions-quote reveal">
+      <span class="quote-mark">&ldquo;</span>
+      幸好跟你们一起来。
+      <span class="quote-mark">&rdquo;</span>
+    </p>
+
+    <p class="companions-after reveal">
+      那天我才知道，我们办的不是研学团。<br>
+      是让一群在马来西亚教得很孤单的老师，<br>
+      在台北的某个冬夜，<br>
+      重新找到 <strong>教育路上的合伙人</strong>。
+    </p>
+
+    <p class="companions-cap reveal">
+      2026 年，名额限 25 位。<br>
+      <span class="cap-detail">不是为了制造紧迫——是因为再多，就不亲密了。</span>
     </p>
 
     <div class="companions-grid">
@@ -1867,7 +2069,9 @@
           <span class="price-amount">RM 1,800 / 人</span>
           <span class="price-detail">
             同校 3 位以上报名，每位 <strong style="color:var(--cream);">RM 1,500</strong><br>
-            <span style="opacity:0.7;">详细包含项目，请见上方「关于费用与安排」</span>
+            <span class="price-context-note">
+              一趟改变眼光的远行<br>
+            </span>
           </span>
         </div>
       </div>
@@ -1885,8 +2089,8 @@
       </div>
     </div>
 
-    <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="cta-button">立 即 报 名</a>
-    <span class="cta-secondary">愿我们带回来的，不止是笔记。</span>
+    <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="cta-button">立 即 锁 位</a>
+    <span class="cta-secondary">愿我们带回来的，不止是笔记。<br>是一句愿意继续教下去的——「幸好」。</span>
   </div>
 </section>
 

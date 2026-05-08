@@ -164,6 +164,23 @@ src="https://www.facebook.com/tr?id=9732941860129622&ev=PageView&noscript=1"
     background: var(--ink);
     color: var(--cream);
   }
+  .nav-cta-secondary {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    color: var(--ink-soft, #6b6b6b);
+    text-decoration: none;
+    padding: 8px 14px;
+    margin-right: 6px;
+    transition: all 0.25s ease;
+  }
+  .nav-cta-secondary:hover {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+  @media (max-width: 600px) {
+    .nav-cta-secondary { display: none; }
+  }
 
   /* ============ Hero ============ */
   .hero {
@@ -848,6 +865,44 @@ src="https://www.facebook.com/tr?id=9732941860129622&ev=PageView&noscript=1"
     background: var(--terra);
     border-color: var(--terra);
     color: var(--cream);
+  }
+
+  .cta-button-row {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .cta-button-secondary {
+    display: inline-block;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: var(--cream);
+    background: transparent;
+    padding: 24px 48px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid var(--cream);
+  }
+
+  .cta-button-secondary:hover {
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  @media (max-width: 600px) {
+    .cta-button-row {
+      flex-direction: column;
+      gap: 14px;
+    }
+    .cta-button, .cta-button-secondary {
+      padding: 20px 40px;
+      font-size: 16px;
+    }
   }
 
   .cta-secondary {
@@ -1593,7 +1648,10 @@ src="https://www.facebook.com/tr?id=9732941860129622&ev=PageView&noscript=1"
     <a href="#top" class="nav-brand">
       Taiwan Reading <span class="dot">·</span> Journey
     </a>
-    <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="nav-cta" onclick="fbq('track', 'Lead');">立 即 锁 位</a>
+    <div>
+      <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="nav-cta-secondary" onclick="fbq('track', 'Lead');">了解更多</a>
+      <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="nav-cta" onclick="fbq('track', 'Lead');">立 即 锁 位</a>
+    </div>
   </div>
 </nav>
 
@@ -2110,7 +2168,10 @@ src="https://www.facebook.com/tr?id=9732941860129622&ev=PageView&noscript=1"
       </div>
     </div>
 
-    <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="cta-button" onclick="fbq('track', 'Lead');">立 即 锁 位</a>
+    <div class="cta-button-row">
+      <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="cta-button-secondary" onclick="fbq('track', 'Lead');">了 解 更 多</a>
+      <a href="https://wa.link/8p3bpq" target="_blank" rel="noopener" class="cta-button" onclick="fbq('track', 'Lead');">立 即 锁 位</a>
+    </div>
     <span class="cta-secondary">愿我们带回来的，不止是笔记。<br>是一句愿意继续教下去的——「幸好」。</span>
   </div>
 </section>
